@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Plus</title>
+  <style>
+    body {font-family: Tahoma, sans-serif; direction: rtl; background: #f0f8ff; text-align: center;}
+    h1 {color: #2c3e50; transition: color 0.5s;}
+    h1:hover {color: #3498db;}
+    form {background: #fff; padding: 20px; margin: 30px auto; width: 350px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2);}
+    input, textarea {width: 95%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 6px; transition: border-color 0.3s;}
+    input:focus, textarea:focus {border-color: #3498db; outline: none;}
+    button {background: #3498db; color: #fff; padding: 12px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: background 0.3s;}
+    button:hover {background: #2980b9;}
+    .success {color: green; font-weight: bold; margin-top: 15px;}
+    .error {color: red; font-weight: bold; margin-top: 15px;}
+  </style>
+</head>
+<body>
+  <h1>مرحبًا بك في Web Plus</h1>
+  <p>أدخل وصف موقعك وسنستلمه مباشرة عبر البريد الإلكتروني</p>
+
+  <form id="clientForm" action="send.php" method="post">
+    <label>اسم العميل:</label>
+    <input type="text" name="name" required>
+
+    <label>البريد الإلكتروني للعميل:</label>
+    <input type="email" name="email" required>
+
+    <label>وصف الموقع المطلوب:</label>
+    <textarea name="description" rows="5" required></textarea>
+
+    <button type="submit">إرسال</button>
+  </form>
+
+  <div id="responseMessage"></div>
+
+  <script>
+    // إضافة رسالة تفاعلية بعد الإرسال
+    const form = document.getElementById('clientForm');
+    const responseDiv = document.getElementById('responseMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // منع الإرسال الافتراضي
+      responseDiv.innerHTML = "<p class='success'>⏳ جاري إرسال طلبك...</p>";
+
+      // محاكاة إرسال البيانات
+      setTimeout(() => {
+        responseDiv.innerHTML = "<p class='success'>✅ تم إرسال الوصف بنجاح، سنتواصل معك قريبًا.</p>";
+        form.reset();
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
