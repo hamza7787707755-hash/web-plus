@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>واجهة - تطوير صفحات الويب التعريفية</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        /* Header & Logo */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* توسيط اللوجو في المنتصف تماماً */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px auto;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #f1f5f9;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Buttons */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #ffffff;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .btn-gmail {
+            background-color: #ea4335;
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        /* Services Grid */
+        .services-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .services-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f1f5f9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- اللوجو المتمركز في الوسط -->
+        <div class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 100" width="280" height="90">
+              <rect x="5" y="10" width="80" height="80" rx="18" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5"/>
+              <circle cx="24" cy="26" r="3.5" fill="#ef4444"/>
+              <circle cx="36" cy="26" r="3.5" fill="#f59e0b"/>
+              <circle cx="48" cy="26" r="3.5" fill="#10b981"/>
+              <path d="M 24 48 L 38 72 L 45 56 L 52 72 L 66 48" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="102" y="55" font-family="system-ui, sans-serif" font-weight="800" font-size="34" fill="#ffffff">Wajha<tspan fill="#38bdf8">Web</tspan></text>
+              <text x="104" y="78" font-family="system-ui, sans-serif" font-weight="500" font-size="14" fill="#94a3b8">تطوير صفحات الويب</text>
+            </svg>
+        </div>
+
+        <h1>تصميم وتطوير صفحات الويب التعريفية</h1>
+        <p>أساعد أصحاب المشاريع والأفراد في بناء صفحات ويب واضحة، جذابة، وسريعة، تعمل بمرونة عالية على كافة الهواتف والأجهزة المكتبية.</p>
+        
+        <div class="btn-container">
+            <a href="mailto:WajhaWeb@gmail.com" class="btn btn-gmail">
+                ✉️ راسلنا عبر الجيميل
+            </a>
+            <a href="https://www.instagram.com/wajh.web?stkn=em8xZ3MxcWd5MTVr" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+                📸 تابعنا على إنستغرام
+            </a>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <h2>ميزات الخدمة</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>تصميم متجاوب 📱</h3>
+                <p>تنسيق الصفحة لتظهر بأسلوب عصري وسلس على مختلف أحجام الشاشات وتطبيقات الهاتف.</p>
+            </div>
+            <div class="card">
+                <h3>أكواد نظيفة وسريعة ⚡</h3>
+                <p>كتابة الهيكلية بـ HTML5 و CSS3 وفق أفضل الممارسات لضمان السرعة وتسهيل التعديل المستقبلي.</p>
+            </div>
+            <div class="card">
+                <h3>ربط واستضافة مجانية 🌐</h3>
+                <p>مساعدة العميل في رفع الصفحة ونشرها على منصة GitHub Pages ليصبح لديه رابط موقع متاح مجاناً.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© جميع الحقوق محفوظة - Wajha Web</p>
+    </footer>
+
+</body>
+</html>
